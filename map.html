@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro map</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <a href="map.html">Map</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="tickets.html">Tickets</a>
+        <a href="announcements.html">Announcements</a>
+    </header>
+    <img src="metro map.png" alt="">
+    <label for="start">Start point: </label>
+    <select name="start" id="start" required>
+        <option value="" selected>Select a starting station:</option>
+        <optgroup label="Grey">
+            <option value="Schneier Road">Schneier Road</option>
+            <option value="Central">Central</option>
+            <option value="Grand Station">Grand Station</option>
+            <option value="Gates Marsh">Gates Marsh</option>
+        </optgroup>
+        <optgroup label="Red">
+            <option value="Torvalds Park">Torvalds Park</option>
+            <option value="Central">Central</option>
+            <option value="Kernighan Way">Kernighan Way</option>
+            <option value="Stallman Bridge">Stallman Bridge</option>
+        </optgroup>
+        <optgroup label="Blue">
+            <option value="Wozniak Bridge">Wozniak Bridge</option>
+            <option value="Grand Station">Grand Station</option>
+            <option value="Lecun Street">Lecun Street</option>
+            <option value="Chollet Lane">Chollet Lane</option>
+            <option value="Poettering Wood">Poettering Wood</option>
+            </optgroup>
+    </select>
+    <label for="end">End point: </label>
+    <select name="end" id="end" required>
+        <option value="" selected>Select an ending station:</option>
+        <optgroup label="Grey">
+            <option value="Schneier Road">Schneier Road</option>
+            <option value="Central">Central</option>
+            <option value="Grand Station">Grand Station</option>
+            <option value="Gates Marsh">Gates Marsh</option>
+        </optgroup>
+        <optgroup label="Red">
+            <option value="Torvalds Park">Torvalds Park</option>
+            <option value="Central">Central</option>
+            <option value="Kernighan Way">Kernighan Way</option>
+            <option value="Stallman Bridge">Stallman Bridge</option>
+        </optgroup>
+        <optgroup label="Blue">
+            <option value="Wozniak Bridge">Wozniak Bridge</option>
+            <option value="Grand Station">Grand Station</option>
+            <option value="Lecun Street">Lecun Street</option>
+            <option value="Chollet Lane">Chollet Lane</option>
+            <option value="Poettering Wood">Poettering Wood</option>
+            </optgroup>
+    </select>
+    <button id="submit">Submit</button>
+    <h2 id="route"></h2>
+</body>
+</html>

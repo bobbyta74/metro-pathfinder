@@ -1,0 +1,33 @@
+body {
+    background-color:#dcf5e8;
+    font-weight:bold;
+    font-family: 'Nunito Sans', sans-serif;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:0;
+    gap:15px;
+}
+
+img {
+    width:50%;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color:#9ee0d3;
+    align-self:flex-start;
+    width:100%;
+    height:50px;
+    display:grid;
+    grid-template-columns:repeat(5, 1fr) 10fr;
+}
+
+header>a {
+    place-self:center;
+    font-size:20px;
+}
