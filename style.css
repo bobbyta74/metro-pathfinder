@@ -31,3 +31,7 @@ header>a {
     place-self:center;
     font-size:20px;
 }
+
+#route {
+    width:50%;
+}
