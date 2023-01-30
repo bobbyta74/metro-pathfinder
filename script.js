@@ -32,6 +32,7 @@ function doubleroute(middlestation) {
 }
 
 submit.addEventListener("click", function () {
+    route = [];
     let start = startinput.value;
     let end = endinput.value;
 
