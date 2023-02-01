@@ -61,11 +61,15 @@ submit.addEventListener("click", function () {
     } else {
         if (startline.indexOf("Central") > -1 && endline.indexOf("Central") > -1) {
             //Both lines have Central station
-            doubleroute("Central");
+            addtoroute(start, "Central", startline, startline);
+            route.pop();
+            addtoroute("Central", end, endline, endline);
             changeover1 = "Central";
         } else if (startline.indexOf("Grand Station") > -1 && endline.indexOf("Grand Station") > -1) {
             //Both lines have Grand Station
-            doubleroute("Grand Station");
+            addtoroute(start, "Grand Station", startline, startline);
+            route.pop();
+            addtoroute("Grand Station", end, endline, endline);
             changeover1 = "Grand Station";
         } else {
             has2changeovers = true;
