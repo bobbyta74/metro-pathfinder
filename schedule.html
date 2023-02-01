@@ -1,0 +1,181 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<link rel="stylesheet" href="schedule.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/		bootstrap.min.css" rel="stylesheet" integrity="sha384-		GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 		crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<nav class="navbar bg-body-tertiary fixed-top">
+			<div class="container-fluid">
+			  <a class="navbar-brand" href="#">Metro of Town Codeville</a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+				<div class="offcanvas-header">
+				  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+				  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+				  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+					<li class="nav-item">
+					  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link active" href="map.html">Map</a>
+					</li>
+					<li class="nav-item">
+					  <a class="dropdown-item" href="schedule.html">Schedule and ticket prices</a>
+					</li>
+				  </ul>
+			   </div>
+			  </div>
+			</div>
+		  </nav>
+		<main>
+			<div id="schedulecontainer">
+				<table>
+				<tr>
+					<th></th>
+					<th colspan="4">Line 1</th>
+				</tr>
+					<tr>
+						<td>Torvalds Park</td>
+						<td>8 am</td>
+						<td>14 pm</td>
+						<td>15 pm</td>
+						<td>22 pm</td>
+				</tr>
+					<tr>
+						<td>Central</td>
+						<td>8:30 am</td>
+						<td>13 pm</td>
+						<td>15:30 pm</td>
+						<td>21 pm</td>
+				</tr>
+					<tr>
+						<td>Kernighan Way</td>
+						<td>9 am</td>
+						<td>12 pm</td>
+						<td>16:30 pm</td>
+						<td>20 pm</td>
+				</tr>
+					<tr>
+						<td>Stallman Bridge</td>
+						<td>10:30 am</td>
+						<td>11:30 am</td>
+						<td>18 pm</td>
+						<td>19 pm</td>
+				</tr>
+				</table>
+
+
+				<table>
+					<tr>
+						<th></th>
+						<th colspan="4">Line 2</th>
+				</tr>
+					<tr>
+						<td>Schneier Road</td>
+						<td>7 am</td>
+						<td>15 pm</td>
+						<td>16 pm</td>
+						<td>23 pm</td>
+				</tr>
+					<tr>
+						<td>Central</td>
+						<td>8 am</td>
+						<td>17 pm</td>
+						<td>15:30 pm</td>
+						<td>22 pm</td>
+				</tr>
+					<tr>
+						<td>Grand Station</td>
+						<td>9 am</td>
+						<td>18 pm</td>
+						<td>16:30 pm</td>
+						<td>21 pm</td>
+				</tr>
+					<tr>
+						<td>Gates Marsh</td>
+						<td>10:30 am</td>
+						<td>12 pm</td>
+						<td>19 pm</td>
+						<td>20 pm</td>
+				</tr>
+				</table>
+			
+					<table>
+					<tr>
+						<th></th>
+						<th colspan="4">Line 3</th>
+				</tr>
+					<tr>
+						<td>Wozniak Bridge</td>
+						<td>8 am</td>
+						<td>14 pm</td>
+						<td>15 pm</td>
+						<td>22 pm</td>
+				</tr>
+					<td>Grand Station</td>
+						<td>8:30 am</td>
+						<td>13 pm</td>
+						<td>15:30 pm</td>
+						<td>21 pm</td>
+				</tr>
+					<tr>
+						<td>Lecun Street</td>
+						<td>9 am</td>
+						<td>12 pm</td>
+						<td>16:30 pm</td>
+						<td>20 pm</td>
+				</tr>
+					<tr>
+						<td>Chollet Lane</td>
+						<td>10:30 am</td>
+						<td>11:30 am</td>
+						<td>18 pm</td>
+						<td>19 pm</td>
+				</tr>
+					<tr>
+						<td>Poettering Wood</td>
+						<td>10:30 am</td>
+						<td>11:30 am</td>
+						<td>18 pm</td>
+						<td>19 pm</td>
+				</tr>
+				</table>
+			</div>
+		<div id="tablecontainer">
+			<table>
+				<tr>
+					<th></th>
+					<th colspan="4">Price of the tickets</th>
+				</tr>
+				<tr>
+					<td>1 hour ticket</td>
+					<td>100 kj</td>
+				</tr>
+				<tr>
+					<td>2 hour ticket</td>
+					<td>200 kj</td>
+				</tr>
+				<tr>
+					<td>4 hour ticket</td>
+					<td>300 kj</td>
+				</tr>
+				<tr>
+					<td>12 hour ticket</td>
+					<td>1000 kj</td>
+				</tr>
+				<tr>
+					<td>24 hour ticket</td>
+					<td>1900 kj</td>
+				</tr>
+			</table>
+		</div>
+	</main>
+</body>
+	
+</html>

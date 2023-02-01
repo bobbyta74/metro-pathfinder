@@ -16,6 +16,12 @@ let endline;
 let route = [];
 
 function addtoroute(ministart, miniend, ministartline, miniendline) {
+    if (miniendline.indexOf(ministart) > -1) {
+        ministartline = miniendline;
+    }
+    if (ministartline.indexOf(miniend) > -1) {
+        miniendline = ministartline;
+    }
     if (ministartline.indexOf(miniend) > ministartline.indexOf(ministart)) {
         route = route.concat(ministartline.slice(ministartline.indexOf(ministart), ministartline.indexOf(miniend) + 1));
     } else {
@@ -41,12 +47,6 @@ submit.addEventListener("click", function () {
             endline = lines.indexOf(line);
             //endline is now the array containing end
             endline = lines[endline]
-        }
-        if (endline.indexOf(start) > -1) {
-            startline = endline;
-        }
-        if (startline.indexOf(end) > -1) {
-            endline = startline;
         }
     }
 

@@ -1,0 +1,22 @@
+main {
+  padding-top:100px;
+  display:flex;
+  gap:50px;
+}
+
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  border-width:2px !important;
+  padding:5px;
+}
+
+#schedulecontainer, #tablecontainer {
+  display:flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+#tablecontainer {
+  justify-content:center;
+}
