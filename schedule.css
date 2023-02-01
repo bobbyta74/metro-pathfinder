@@ -1,7 +1,14 @@
+body {
+  background-color: #e8e1d3 !important;
+  display:flex;
+}
+
 main {
   padding-top:100px;
   display:flex;
   gap:50px;
+  width:100vw;
+  padding-left:30%;
 }
 
 table, th, td {

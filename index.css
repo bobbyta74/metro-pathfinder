@@ -1,0 +1,74 @@
+body {
+	font-family: 'Nunito Sans', sans-serif;
+}
+ 
+.bg-image {
+	background: url("metro.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100vh;
+  filter:blur(5px);
+  
+  }
+  
+  /* Position text in the middle of the page/image */
+  .bg-text {
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	border: 3px solid #f1f1f1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+  }
+
+
+#container{
+	position: fixed;
+	bottom: 5;
+	left: 10;
+	right: 10;
+	height: 10%;
+	display:flex;
+	gap: 150px;
+	justify-content: flex-start;
+	align-content: start;
+	align-items: start;
+}
+
+.sticky-note{
+	width: 100px;
+	height: 100px;
+	background-color: white;
+}
+
+	
+.note-text{
+	width: 180px;
+	height:180px;
+	font-size: 20px;
+}
+
+#addButton{
+	position: absolute;
+	bottom: 90;
+	left: 5;
+	right: 1400;
+	height: 1%;
+
+}
+
+
+#title{
+	font-weight: bold;
+	font-style: playfair;
+}
+
