@@ -24,13 +24,6 @@ function addtoroute(ministart, miniend, ministartline, miniendline) {
     }
 }
 
-function doubleroute(middlestation) {
-    //Route with 1 swap
-    addtoroute(start, middlestation, startline, startline);
-    route.pop();
-    addtoroute(middlestation, end, endline, endline);
-}
-
 submit.addEventListener("click", function () {
     route = [];
     let start = startinput.value;
@@ -48,6 +41,12 @@ submit.addEventListener("click", function () {
             endline = lines.indexOf(line);
             //endline is now the array containing end
             endline = lines[endline]
+        }
+        if (endline.indexOf(start) > -1) {
+            startline = endline;
+        }
+        if (startline.indexOf(end) > -1) {
+            endline = startline;
         }
     }
 
@@ -96,7 +95,7 @@ submit.addEventListener("click", function () {
     } else if (!has2changeovers) {
         routedisplay.textContent = `Take the ${startlinename} line from ${start} to ${changeover1}, then the ${endlinename} line from ${changeover1} to ${end}`
     } else {
-        routedisplay.textContent = `Take the ${startlinename} line from ${start} to ${changeover1}, then the grey line from ${changeover1} to ${changeover2}, then the ${endlinename} line from ${changeover1} to ${end}`
+        routedisplay.textContent = `Take the ${startlinename} line from ${start} to ${changeover1}, then the grey line from ${changeover1} to ${changeover2}, then the ${endlinename} line from ${changeover2} to ${end}`
     }
 
     routelist.textContent = "Station order: " + route.slice(0, route.length + 1).join(" -> ");
