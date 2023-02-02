@@ -1,0 +1,31 @@
+body {
+    background-color: #e8e1d3 !important;
+    font-weight:bold;
+    font-family: 'Nunito Sans' !important;
+    height:100vh;
+    padding-top:100px;
+}
+
+main {
+    display:flex;
+    flex-direction:column;
+    gap:50px;
+    align-items:center;
+}
+
+.grid {
+    padding:20px;
+    width:100vw;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows:repeat(auto-fit, minmax(150px, 1fr));
+    gap:15px;
+}
+
+.grid>div {
+    border:2px solid black;
+    border-radius:10px;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+}
