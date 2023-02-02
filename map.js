@@ -3,6 +3,8 @@ const routedisplay = document.querySelector("#route");
 const startinput = document.querySelector("#start");
 const endinput = document.querySelector("#end");
 const routelist = document.querySelector("#routelist");
+const timeoutput = document.querySelector("#time");
+const ticketoutput = document.querySelector("#tickets");
 
 
 //Array, check common
@@ -97,6 +99,38 @@ submit.addEventListener("click", function () {
     } else {
         routedisplay.textContent = `Take the ${startlinename} line from ${start} to ${changeover1}, then the grey line from ${changeover1} to ${changeover2}, then the ${endlinename} line from ${changeover2} to ${end}`
     }
+    if (startline == endline) {
+        routedisplay.textContent = "You cheeky bastard";
+    }
 
     routelist.textContent = "Station order: " + route.slice(0, route.length + 1).join(" -> ");
+
+    //Time and ticket prices
+    let timetaken = (route.length - 1) * 30;
+    timeoutput.textContent = "Your journey will take " + String(timetaken) + " minutes";
+    let tickettype;
+    let ticketprice;
+    if (timetaken > 720) {
+        tickettype = "24-hour";
+        ticketprice = "1900kj"
+    } else if (timetaken > 240) {
+        tickettype = "12-hour";
+        ticketprice = "10000kj";
+    } else if (timetaken > 120) {
+        tickettype = "4-hour";
+        ticketprice = "300kj";
+    } else if (timetaken > 60) {
+        tickettype = "2-hour";
+        ticketprice = "200kj";
+    } else if (timetaken > 0) {
+        tickettype = "1-hour";
+        ticketprice = "100kj";
+    }
+
+    if (timetaken > 0) {
+        ticketoutput.textContent = `You will need a ${tickettype} ticket, which will cost you ${ticketprice}.`
+    } else {
+        ticketoutput.textContent = "You don't need a ticket, silly."
+    }
+
 })
