@@ -5,12 +5,25 @@ const endinput = document.querySelector("#end");
 const routelist = document.querySelector("#routelist");
 const timeoutput = document.querySelector("#time");
 const ticketoutput = document.querySelector("#tickets");
-
+const attractionoutput = document.querySelector("#attractionoutput");
 
 //Array, check common
 
 let lines = [["Schneier Road", "Central", "Grand Station", "Gates Marsh"],["Torvalds Park", "Central", "Kernighan Way", "Stallman Bridge"],["Wozniak Bridge", "Grand Station", "Lecun Street", "Chollet Lane", "Poettering Wood"]];
-let linenames = ["grey", "red", "blue"]
+let linenames = ["grey", "red", "blue"];
+let attractions = {
+    Schneier_Road: "Zoo",
+    Central: "Natural History Museum",
+    Grand_Station: "CIA black site",
+    Gates_Marsh: "Shopping centre",
+    Torvalds_Park: "Water Park",
+    Kernighan_Way: "Jeffrey Epstein's mansion",
+    Stallman_Bridge: "Obama's Drone Depot",
+    Wozniak_Bridge: "Bush Centre for Bombing Civilians",
+    Lecun_Street: "CIA Institute of Staging Coups in Developing Countries and Blaming their Failures on Socialism",
+    Chollet_Lane: "Memorial of War Criminals",
+    Poettering_Wood: "Bude Tunnel Replica"
+}
 
 //Start and end stations, as well as the lines they are on
 let startline;
@@ -133,4 +146,5 @@ submit.addEventListener("click", function () {
         ticketoutput.textContent = "You don't need a ticket, silly."
     }
 
+    attractionoutput.textContent = "An attraction close to your destination is the " + attractions[end.replace(" ", "_")];
 })
