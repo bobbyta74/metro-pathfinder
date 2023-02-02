@@ -23,6 +23,7 @@ submit.addEventListener("click", function() {
         announcement.textContent = myinp.value;
         myoutput.appendChild(announcement);
         localStorage.setItem("announcements", JSON.stringify(announcements));
+        myinp.value = "";
     }
 })
 
